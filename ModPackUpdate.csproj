@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<DebugSymbols>true</DebugSymbols>
+		<DefineTrace>true</DefineTrace>
+		<ErrorReport>none</ErrorReport>
+		<FileAlignment>512</FileAlignment>
+		<GenerateDocumentation>false</GenerateDocumentation>
+		<IncludeSymbols>true</IncludeSymbols>
+		<LangVersion>latest</LangVersion>
+		<NoLogo>true</NoLogo>
+		<Nullable>disable</Nullable>
+		<OutputPath>bin\$(Configuration)\</OutputPath>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<Prefer32Bit>false</Prefer32Bit>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<TargetFramework>net472</TargetFramework>
+		<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+		<Utf8Output>true</Utf8Output>
+		<WarningLevel>4</WarningLevel>
+
+		<Authors>Xspeed</Authors>
+		<Company>Xspeed</Company>
+		<Copyright>Copyright © Xspeed 2022</Copyright>
+		<NeutralLanguage>en</NeutralLanguage>
+		<Product>ModPackUpdater</Product>
+		<Version>1.0</Version>
+		<VersionPrefix>1.0</VersionPrefix>
+
+		<OutputType>WinExe</OutputType>
+		<AssemblyTitle>Small tool for checking and updating the modpack for lazy people</AssemblyTitle>
+		<ApplicationIcon>peepoMine.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+		<DebugType>full</DebugType>
+		<DefineConstants>$(DefineConstants),TRACE,DEBUG,$(AdditionalConstants)</DefineConstants>
+		<DefineDebug>true</DefineDebug>
+		<Optimize>false</Optimize>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<DebugType>pdbonly</DebugType>
+		<DefineConstants>$(DefineConstants),TRACE,$(AdditionalConstants)</DefineConstants>
+		<DefineDebug>false</DefineDebug>
+		<Optimize>true</Optimize>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="System.IO.Compression" />
+		<Reference Include="System.Windows.Forms" />
+	</ItemGroup>
+
+</Project>
